@@ -2,7 +2,7 @@ const classes = ["統資一甲","統資一乙","統資二甲","統資二乙","�
 const topics = ["課程學習","空間設備","系務活動","生涯發展","其他"];
 const classInsects = {
   "統資一甲":{icon:"🐞",zh:"瓢蟲",en:"Ladybird"},
-  "統資一乙":{icon:"🌈",zh:"虹彩叩頭蟲",en:"Iridescent click beetle"},
+  "統資一乙":{icon:"🪲",zh:"虹彩叩頭蟲",en:"Iridescent click beetle"},
   "統資二甲":{icon:"✨",zh:"螢火蟲",en:"Firefly"},
   "統資二乙":{icon:"𓆦",zh:"蜻蜓",en:"Dragonfly"},
   "統資三甲":{icon:"🦋",zh:"鳳蝶",en:"Swallowtail"},
