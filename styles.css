@@ -25,3 +25,29 @@ dialog{border:1.5px solid var(--ink);border-radius:5px;background:var(--paper);b
 @keyframes butterflyDrift{0%,100%{transform:translate(0,0) rotate(-8deg) scale(1)}28%{transform:translate(22px,-18px) rotate(2deg) scale(.94)}62%{transform:translate(-12px,12px) rotate(-13deg) scale(1.04)}}@keyframes dragonflyGlide{0%,100%{transform:translate(-8px,6px) rotate(-7deg)}34%{transform:translate(48px,-13px) rotate(3deg)}68%{transform:translate(17px,22px) rotate(-2deg)}}@keyframes cicadaPulse{0%,100%{transform:translateY(0) rotate(3deg)}48%{transform:translateY(-5px) rotate(-2deg)}52%{transform:translateY(-5px) rotate(2deg)}}@keyframes mantisSway{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(4deg) translateY(-9px)}}@keyframes fireflyBlink{0%,100%{opacity:.2;transform:scale(.55)}45%{opacity:1;transform:scale(1.15)}65%{opacity:.55;transform:scale(.8)}}
 @media(max-width:1000px){.butterfly-art{left:42%;top:19%}.dragonfly-art{left:48%}.mantis-art{left:47%;bottom:4%}.cicada-art{right:5%;top:48%}}
 @media(max-width:650px){.butterfly-art{left:41%;top:7%}.dragonfly-art{left:52%;top:-2%}.cicada-art{right:11%;top:48%}.mantis-art{left:45%;bottom:1%}.firefly-glow-one{left:53%;top:17%}.firefly-glow-two{right:10%;top:55%}}
+
+/* Bright, energetic biodiversity palette */
+:root{--ink:#24372f;--cream:#fff8df;--paper:#fffef7;--lime:#dff46a;--orange:#ff7048;--blue:#79d8d0;--purple:#9585ec;--line:rgba(36,55,47,.22);--shadow:0 22px 52px rgba(62,88,60,.14)}
+body{background-color:#fff9e7;background-image:radial-gradient(circle at 12% 8%,rgba(255,214,92,.3),transparent 24%),radial-gradient(circle at 88% 18%,rgba(121,216,208,.22),transparent 25%),linear-gradient(180deg,#fffdf3 0%,#fff8df 100%)}
+.site-header{background:rgba(255,254,247,.76);backdrop-filter:blur(12px);mix-blend-mode:normal;border-bottom-color:rgba(36,55,47,.16)}
+.hero{background:#fff9e8}
+.hero:before{background:radial-gradient(circle at 18% 30%,rgba(255,112,72,.2),transparent 29%),radial-gradient(circle at 82% 20%,rgba(121,216,208,.28),transparent 30%),radial-gradient(circle at 68% 82%,rgba(223,244,106,.27),transparent 25%)}
+.hero-noise{opacity:.04}
+.ink-sun{background:rgba(255,218,79,.23);border-color:rgba(255,112,72,.45);box-shadow:0 0 0 18px rgba(255,232,117,.1)}
+.hero-art:before{background:#fffdf2;box-shadow:0 22px 65px rgba(63,112,88,.17)}
+.hero-art picture img{filter:saturate(1.12) brightness(1.08) contrast(.97)}
+.hero h1 em{color:#f45f3d}
+.primary-button,.pill-button{background:#ff7048;color:#fff;box-shadow:0 10px 24px rgba(255,112,72,.23)}
+.primary-button:hover,.pill-button:hover{background:#e95535}
+.manifesto{background:#fffef7}
+.voices{background:linear-gradient(180deg,#fff8df 0%,#f7ffdc 100%)}
+.voice-card{background:#fffef8;box-shadow:0 14px 36px rgba(62,88,60,.11)}
+.voice-card:nth-child(4n+1){background:#f3fac8}.voice-card:nth-child(4n+2){background:#ffe2d2}.voice-card:nth-child(4n+3){background:#daf6f2}.voice-card:nth-child(4n){background:#e9e3ff}
+.live-count{background:#fff;color:#24372f;box-shadow:0 12px 30px rgba(62,88,60,.1)}
+.classes{background:#247f78;background-image:radial-gradient(circle at 12% 20%,rgba(255,242,113,.14),transparent 23%),radial-gradient(circle at 86% 75%,rgba(121,216,208,.22),transparent 27%);border-top:8px solid #ffe46b}
+.section-heading.light .section-number{color:#fff36f}
+.class-cell:hover{background:#fff36f;color:#24372f}
+.cta-section{background:linear-gradient(135deg,#ffba68 0%,#ff7d62 55%,#73d7cf 100%)}
+footer{background:#21473e}
+.biodiversity-bug{filter:saturate(1.13) brightness(1.04) drop-shadow(0 12px 18px rgba(50,94,71,.2))}
+.firefly-glow{background:#fff779;box-shadow:0 0 8px 3px rgba(255,247,121,.8),0 0 22px 8px rgba(180,239,93,.45)}
