@@ -51,11 +51,16 @@ function extractKeywords(voices){
   segments.map(w=>w.toLowerCase().trim()).filter(w=>w.length>1&&!stopWords.has(w)&&!/^[0-9]+$/.test(w)).forEach(w=>counts.set(w,(counts.get(w)||0)+1));
   return [...counts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"zh-Hant")).slice(0,20);
 }
+function shuffleWords(words){
+  const shuffled=[...words];
+  for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]}
+  return shuffled;
+}
 function renderWordCloud(){
-  const words=extractKeywords(filteredVoices()),cloud=$("#wordCloud"),empty=$("#wordCloudEmpty");cloud.innerHTML="";cloud.classList.remove("sis-cloud");empty.hidden=words.length>0;
-  if(!words.length)return;
-  const max=words[0][1],min=words[words.length-1][1];
-  words.forEach(([word,count],i)=>{const item=document.createElement("span"),ratio=max===min?.45:(count-min)/(max-min);item.className="cloud-word";item.style.setProperty("--weight",(.85+ratio*1.65).toFixed(2));item.style.setProperty("--cloud-color",`var(--cloud-${i%5})`);item.textContent=word;const n=document.createElement("sup");n.textContent=count;item.append(n);item.title=`${word}：${count}`;item.setAttribute("aria-label",`${word}，出現 ${count} 次`);cloud.append(item)})
+  const ranked=extractKeywords(filteredVoices()),cloud=$("#wordCloud"),empty=$("#wordCloudEmpty");cloud.innerHTML="";cloud.classList.remove("sis-cloud");empty.hidden=ranked.length>0;
+  if(!ranked.length)return;
+  const max=Math.max(...ranked.map(([,count])=>count)),min=Math.min(...ranked.map(([,count])=>count));
+  shuffleWords(ranked).forEach(([word,count],i)=>{const item=document.createElement("span"),ratio=max===min?.45:(count-min)/(max-min);item.className="cloud-word";item.style.setProperty("--weight",(.85+ratio*1.65).toFixed(2));item.style.setProperty("--cloud-color",`var(--cloud-${i%5})`);item.textContent=word;const n=document.createElement("sup");n.textContent=count;item.append(n);item.title=`${word}：${count}`;item.setAttribute("aria-label",`${word}，出現 ${count} 次`);cloud.append(item)})
 }
 function renderCards(){
   const filtered=filteredVoices();
