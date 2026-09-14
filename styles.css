@@ -57,12 +57,7 @@ footer{background:#21473e}
 .class-insect{position:absolute;right:18px;top:13px;font-size:3.4rem;line-height:1;filter:drop-shadow(2px 3px 0 rgba(0,0,0,.12));transform:rotate(-6deg);transition:.3s}.class-cell:nth-child(even) .class-insect{transform:rotate(7deg)}.class-cell:hover .class-insect{transform:translateY(-5px) rotate(3deg) scale(1.1)}.class-cell .insect-name{font-size:.8rem;font-weight:800;letter-spacing:.12em;color:#fff36f;opacity:1;margin:6px 0 15px}.class-cell:hover .insect-name{color:#247f78}.class-cell>i{opacity:.45}
 @media(max-width:760px){.keyword-panel{grid-template-columns:1fr;gap:8px}.word-cloud{min-height:160px;padding:8px}.word-cloud-empty{grid-column:1}.cloud-word{font-size:calc(var(--weight)*.88rem)}}
 
-/* SIS-shaped keyword cloud and eleven-class habitat */
-.word-cloud.sis-cloud{position:relative;display:block;min-height:320px;padding:0;overflow:hidden;isolation:isolate}
-.word-cloud.sis-cloud::before{content:"SIS";position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);font:900 clamp(10rem,24vw,19rem)/.75 "Noto Sans TC",sans-serif;letter-spacing:.07em;white-space:nowrap;color:rgba(121,216,208,.07);-webkit-text-stroke:2px rgba(36,55,47,.13);z-index:-1}
-.sis-cloud .cloud-word{position:absolute;left:var(--x);top:var(--y);font-size:clamp(.72rem,calc(var(--weight)*.78rem),1.55rem);white-space:nowrap;transform:translate(-50%,-50%) rotate(-2deg);text-shadow:0 1px 0 #fff;z-index:1}
-.sis-cloud .cloud-word:nth-child(3n){transform:translate(-50%,-50%) rotate(2deg)}
-.sis-cloud .cloud-word:hover{transform:translate(-50%,-50%) scale(1.12);z-index:3}
+/* Twelve-class habitat */
 .class-habitat{grid-template-columns:repeat(4,1fr)}
-@media(max-width:1000px){.class-habitat{grid-template-columns:repeat(2,1fr)}.word-cloud.sis-cloud{min-height:285px}}
-@media(max-width:650px){.class-habitat{grid-template-columns:1fr}.word-cloud.sis-cloud{min-height:225px}.word-cloud.sis-cloud::before{font-size:clamp(7.5rem,43vw,11rem);-webkit-text-stroke:1px rgba(36,55,47,.14)}.sis-cloud .cloud-word{font-size:clamp(.62rem,calc(var(--weight)*.68rem),1.15rem)}}
+@media(max-width:1000px){.class-habitat{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.class-habitat{grid-template-columns:1fr}}
