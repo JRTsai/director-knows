@@ -2,17 +2,17 @@ const classes = ["統資一甲","統資一乙","統資二甲","統資二乙","�
 const topics = ["課程學習","空間設備","系務活動","生涯發展","其他"];
 const classInsects = {
   "統資一甲":{icon:"🐞",zh:"瓢蟲",en:"Ladybird"},
-  "統資一乙":{icon:"🪲",zh:"虹彩叩頭蟲",en:"Iridescent click beetle"},
-  "統資二甲":{icon:"✨",zh:"螢火蟲",en:"Firefly"},
-  "統資二乙":{icon:"𓆦",zh:"蜻蜓",en:"Dragonfly"},
+  "統資一乙":{icon:"🌈🪲",zh:"虹彩叩頭蟲",en:"Iridescent click beetle"},
+  "統資二甲":{icon:"✨🪲",zh:"螢火蟲",en:"Firefly"},
+  "統資二乙":{icon:"🪽𓆦",zh:"蜻蜓",en:"Dragonfly"},
   "統資三甲":{icon:"🦋",zh:"鳳蝶",en:"Swallowtail"},
-  "統資三乙":{icon:"🌿",zh:"竹節蟲",en:"Stick insect"},
-  "統資四甲":{icon:"𓆣",zh:"天牛",en:"Longhorn beetle"},
-  "統資四乙":{icon:"⬡",zh:"椿象",en:"Stink bug"},
-  "碩研一":{icon:"♬",zh:"蟬",en:"Cicada"},
+  "統資三乙":{icon:"🌿𓆣",zh:"竹節蟲",en:"Stick insect"},
+  "統資四甲":{icon:"📡🪲",zh:"天牛",en:"Longhorn beetle"},
+  "統資四乙":{icon:"🍃⬡",zh:"椿象",en:"Stink bug"},
+  "碩研一":{icon:"🎶🪲",zh:"蟬",en:"Cicada"},
   "碩研二":{icon:"🦗",zh:"蟋蟀",en:"Cricket"},
-  "碩專一":{icon:"🪲",zh:"獨角仙",en:"Rhinoceros beetle"},
-  "碩專二":{icon:"🪲",zh:"鍬形蟲",en:"Stag beetle"}
+  "碩專一":{icon:"🦏🪲",zh:"獨角仙",en:"Rhinoceros beetle"},
+  "碩專二":{icon:"🦌🪲",zh:"鍬形蟲",en:"Stag beetle"}
 };
 const seedVoices = [
   {id:1,className:"統資一甲",topic:"課程學習",title:"想要更多程式實作的時間",content:"如果每個統計概念都能搭配一個小型資料分析任務，應該會更容易知道方法何時派得上用場。",author:"匿名同學",date:"2026.09.11",likes:28},
@@ -27,8 +27,8 @@ const seedVoices = [
   {id:10,className:"統資四甲",topic:"生涯發展",title:"實習資訊希望能集中整理",content:"目前資訊散落在不同群組，如果有固定頁面依產業與申請時間分類會更好找。",author:"匿名同學",date:"2026.08.25",likes:47}
 ];
 const i18n = {
-  zh:{brand:"主任，知道嗎！！",navVoices:"大家在說什麼",navClasses:"班級地圖",navAbout:"關於計畫",submitShort:"我要投稿",eyebrow:"統計資訊學系｜學生聲音計畫",heroLine1:"主任，",heroLine2:"知道嗎！！",heroLead:"每一個微小的聲音，都可能讓校園長出新的方向。留下觀察、分享故事，或提出一個值得實現的想法。",heroCta:"說出你的想法",browseCta:"先看看大家怎麼說",specimen:"COLLECTIVE VOICE",opinions:"則意見，仍在增加",listen:"傾聽",manifesto1:"一隻螢火蟲的光很小，",manifesto2:"但當許多光聚在一起，",manifesto3:"方向就會出現。",manifestoNote:"這裡不是單向公告欄，而是一處讓每個年級都能被聽見的公共空間。",voicesLabel:"聲音",voicesTitle:"大家在說什麼",live:"即時累積",entries:"則",byClass:"依班級",byTopic:"依主題",keywordTitle:"留言關鍵字文字雲",keywordLead:"依目前篩選的留言即時計數；文字越大，出現次數越多。",keywordEmpty:"目前沒有足夠的關鍵字可呈現。",empty:"這個分類還沒有留言，成為第一個投稿的人吧！",loadMore:"看更多聲音",ecosystem:"生態系",classesTitle:"十二個班級，一個共同棲地",classesLead:"點選班級，看見每一群人的關心與提案。",ctaEyebrow:"你的觀察，值得被看見",ctaTitle:"下一個改變，<br>也許就從一句話開始。",submitNow:"現在投稿",privacy:"可匿名投稿｜送出前可預覽｜請保持尊重與友善",footerText:"由統資系共同維護的學生聲音平台",guidelines:"社群守則",formTitle:"留下你的聲音",formClass:"你的班級",formTopic:"投稿主題",formTitleLabel:"一句話標題",formContent:"想說的話",anonymous:"匿名顯示",nickname:"顯示名稱",send:"送出投稿",all:"全部",voicesUnit:" 則聲音",thanks:"投稿已送出，謝謝你的聲音！",anonymousName:"匿名同學"},
-  en:{brand:"Director, Did You Know?",navVoices:"What We Say",navClasses:"Class Map",navAbout:"About",submitShort:"Contribute",eyebrow:"STATISTICS & INFORMATION SCIENCE · STUDENT VOICES",heroLine1:"Director,",heroLine2:"Did You Know?",heroLead:"Every small voice can help our campus grow in a new direction. Share an observation, a story, or an idea worth bringing to life.",heroCta:"Share your idea",browseCta:"Explore student voices",specimen:"COLLECTIVE VOICE",opinions:"voices and counting",listen:"LISTEN",manifesto1:"One firefly casts a tiny light.",manifesto2:"When many lights gather,",manifesto3:"a direction appears.",manifestoNote:"This is more than a noticeboard. It is a shared space where every cohort can be heard.",voicesLabel:"VOICES",voicesTitle:"What everyone is saying",live:"Live total",entries:"voices",byClass:"Class",byTopic:"Topic",keywordTitle:"Comment keyword cloud",keywordLead:"Live counts from the comments in view; larger words appear more often.",keywordEmpty:"There are not enough keywords to display yet.",empty:"No voice here yet. Be the first to contribute!",loadMore:"Explore more voices",ecosystem:"ECOSYSTEM",classesTitle:"Twelve classes, one shared habitat",classesLead:"Choose a class to discover what each community cares about.",ctaEyebrow:"YOUR OBSERVATION MATTERS",ctaTitle:"The next change<br>may begin with one sentence.",submitNow:"Contribute now",privacy:"Anonymous option · Preview before sending · Stay kind and respectful",footerText:"A student voice platform maintained by our department community",guidelines:"Community guide",formTitle:"Share your voice",formClass:"Your class",formTopic:"Topic",formTitleLabel:"A short headline",formContent:"What would you like to say?",anonymous:"Post anonymously",nickname:"Display name",send:"Send contribution",all:"All",voicesUnit:" voices",thanks:"Thank you — your voice has been added!",anonymousName:"Anonymous student"}
+  zh:{brand:"主任，知道嗎！！",navVoices:"大家在說什麼",navClasses:"班級地圖",navAbout:"關於計畫",submitShort:"我要投稿",eyebrow:"統計資訊學系｜學生聲音計畫",heroLine1:"主任，",heroLine2:"知道嗎！！",heroLead:"每一個微小的聲音，都可能讓校園長出新的方向。留下觀察、分享故事，或提出一個值得實現的想法。",heroCta:"說出你的想法",browseCta:"先看看大家怎麼說",specimen:"COLLECTIVE VOICE",opinions:"則意見，仍在增加",listen:"傾聽",manifesto1:"一隻螢火蟲的光很小，",manifesto2:"但當許多光聚在一起，",manifesto3:"方向就會出現。",manifestoNote:"這裡不是單向公告欄，而是一處讓每個年級都能被聽見的公共空間。",voicesLabel:"聲音",voicesTitle:"大家在說什麼",live:"即時累積",entries:"則",byClass:"依班級",byTopic:"依主題",keywordTitle:"留言關鍵字文字雲",keywordLead:"關鍵字隨機排列成心型；依目前篩選的留言即時計數，文字越大代表出現越多次。",keywordEmpty:"目前沒有足夠的關鍵字可呈現。",empty:"這個分類還沒有留言，成為第一個投稿的人吧！",loadMore:"看更多聲音",ecosystem:"生態系",classesTitle:"十二個班級，一個共同棲地",classesLead:"點選班級，看見每一群人的關心與提案。",ctaEyebrow:"你的觀察，值得被看見",ctaTitle:"下一個改變，<br>也許就從一句話開始。",submitNow:"現在投稿",privacy:"可匿名投稿｜送出前可預覽｜請保持尊重與友善",footerText:"由統資系共同維護的學生聲音平台",guidelines:"社群守則",formTitle:"留下你的聲音",formClass:"你的班級",formTopic:"投稿主題",formTitleLabel:"一句話標題",formContent:"想說的話",anonymous:"匿名顯示",nickname:"顯示名稱",send:"送出投稿",all:"全部",voicesUnit:" 則聲音",thanks:"投稿已送出，謝謝你的聲音！",anonymousName:"匿名同學"},
+  en:{brand:"Director, Did You Know?",navVoices:"What We Say",navClasses:"Class Map",navAbout:"About",submitShort:"Contribute",eyebrow:"STATISTICS & INFORMATION SCIENCE · STUDENT VOICES",heroLine1:"Director,",heroLine2:"Did You Know?",heroLead:"Every small voice can help our campus grow in a new direction. Share an observation, a story, or an idea worth bringing to life.",heroCta:"Share your idea",browseCta:"Explore student voices",specimen:"COLLECTIVE VOICE",opinions:"voices and counting",listen:"LISTEN",manifesto1:"One firefly casts a tiny light.",manifesto2:"When many lights gather,",manifesto3:"a direction appears.",manifestoNote:"This is more than a noticeboard. It is a shared space where every cohort can be heard.",voicesLabel:"VOICES",voicesTitle:"What everyone is saying",live:"Live total",entries:"voices",byClass:"Class",byTopic:"Topic",keywordTitle:"Comment keyword cloud",keywordLead:"Keywords are randomly arranged in a heart; larger words appear more often in the comments currently in view.",keywordEmpty:"There are not enough keywords to display yet.",empty:"No voice here yet. Be the first to contribute!",loadMore:"Explore more voices",ecosystem:"ECOSYSTEM",classesTitle:"Twelve classes, one shared habitat",classesLead:"Choose a class to discover what each community cares about.",ctaEyebrow:"YOUR OBSERVATION MATTERS",ctaTitle:"The next change<br>may begin with one sentence.",submitNow:"Contribute now",privacy:"Anonymous option · Preview before sending · Stay kind and respectful",footerText:"A student voice platform maintained by our department community",guidelines:"Community guide",formTitle:"Share your voice",formClass:"Your class",formTopic:"Topic",formTitleLabel:"A short headline",formContent:"What would you like to say?",anonymous:"Post anonymously",nickname:"Display name",send:"Send contribution",all:"All",voicesUnit:" voices",thanks:"Thank you — your voice has been added!",anonymousName:"Anonymous student"}
 };
 let state={lang:localStorage.getItem("director-lang")||"zh",className:"全部",topic:"全部",limit:6};
 let userVoices=JSON.parse(localStorage.getItem("director-voices")||"[]");
@@ -56,11 +56,19 @@ function shuffleWords(words){
   for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]]}
   return shuffled;
 }
+const heartSlots=[
+  [29,17],[40,14],[60,14],[71,17],
+  [20,29],[37,28],[63,28],[80,29],
+  [18,43],[38,42],[62,42],[82,43],
+  [25,56],[50,55],[75,56],
+  [34,69],[66,69],
+  [42,80],[58,80],[50,91]
+];
 function renderWordCloud(){
-  const ranked=extractKeywords(filteredVoices()),cloud=$("#wordCloud"),empty=$("#wordCloudEmpty");cloud.innerHTML="";cloud.classList.remove("sis-cloud");empty.hidden=ranked.length>0;
+  const ranked=extractKeywords(filteredVoices()),cloud=$("#wordCloud"),empty=$("#wordCloudEmpty");cloud.innerHTML="";cloud.classList.remove("sis-cloud");cloud.classList.add("heart-cloud");empty.hidden=ranked.length>0;
   if(!ranked.length)return;
-  const max=Math.max(...ranked.map(([,count])=>count)),min=Math.min(...ranked.map(([,count])=>count));
-  shuffleWords(ranked).forEach(([word,count],i)=>{const item=document.createElement("span"),ratio=max===min?.45:(count-min)/(max-min);item.className="cloud-word";item.style.setProperty("--weight",(.85+ratio*1.65).toFixed(2));item.style.setProperty("--cloud-color",`var(--cloud-${i%5})`);item.textContent=word;const n=document.createElement("sup");n.textContent=count;item.append(n);item.title=`${word}：${count}`;item.setAttribute("aria-label",`${word}，出現 ${count} 次`);cloud.append(item)})
+  const max=Math.max(...ranked.map(([,count])=>count)),min=Math.min(...ranked.map(([,count])=>count)),slots=shuffleWords(heartSlots);
+  shuffleWords(ranked).forEach(([word,count],i)=>{const item=document.createElement("span"),ratio=max===min?.45:(count-min)/(max-min),slot=slots[i%slots.length];item.className="cloud-word";item.style.setProperty("--weight",(.85+ratio*1.65).toFixed(2));item.style.setProperty("--cloud-color",`var(--cloud-${i%5})`);item.style.setProperty("--x",`${slot[0]}%`);item.style.setProperty("--y",`${slot[1]}%`);item.textContent=word;const n=document.createElement("sup");n.textContent=count;item.append(n);item.title=`${word}：${count}`;item.setAttribute("aria-label",`${word}，出現 ${count} 次`);cloud.append(item)})
 }
 function renderCards(){
   const filtered=filteredVoices();
