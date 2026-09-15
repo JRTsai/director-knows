@@ -142,4 +142,47 @@ $("#submissionForm").addEventListener("submit",e=>{
   localStorage.setItem("director-voices",JSON.stringify(userVoices));$("#formMessage").textContent=i18n[state.lang].thanks;updateCount();renderCards();renderHabitat();
   setTimeout(()=>{dialog.close();e.currentTarget.reset();$("#nameField").hidden=true;$("#charCount").textContent="0";$("#formMessage").textContent=""},900);
 });
-applyLanguage();updateCount();
+function setupIntroAnimation(){
+  const intro=$("#introScreen"),field=$("#introFireflies"),skip=$("#introSkip");
+  if(!intro)return;
+  const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let alreadyPlayed=false;
+  try{alreadyPlayed=sessionStorage.getItem("director-intro-played")==="1"}catch(error){}
+  if(reduceMotion||alreadyPlayed){
+    intro.classList.add("is-hidden");
+    document.body.classList.remove("intro-active");
+    return;
+  }
+  const mobile=window.matchMedia("(max-width: 650px)").matches;
+  const count=mobile?20:36;
+  const scale=Math.min(window.innerWidth/42,18);
+  for(let i=0;i<count;i++){
+    const light=document.createElement("span");
+    const angle=(Math.PI*2*i/count)-Math.PI/2;
+    const heartX=16*Math.sin(angle)**3;
+    const heartY=-(13*Math.cos(angle)-5*Math.cos(2*angle)-2*Math.cos(3*angle)-Math.cos(4*angle));
+    const startAngle=Math.random()*Math.PI*2;
+    const radius=Math.max(window.innerWidth,window.innerHeight)*(.52+Math.random()*.24);
+    light.className="intro-firefly";
+    light.style.setProperty("--start-x",`${Math.cos(startAngle)*radius}px`);
+    light.style.setProperty("--start-y",`${Math.sin(startAngle)*radius}px`);
+    light.style.setProperty("--target-x",`${heartX*scale}px`);
+    light.style.setProperty("--target-y",`${heartY*scale}px`);
+    light.style.setProperty("--delay",`${(i%7)*.045}s`);
+    light.style.setProperty("--blink-delay",`${-Math.random()*1.2}s`);
+    field.append(light);
+  }
+  let closed=false;
+  const dismiss=()=>{
+    if(closed)return;
+    closed=true;
+    try{sessionStorage.setItem("director-intro-played","1")}catch(error){}
+    intro.classList.add("is-leaving");
+    document.body.classList.remove("intro-active");
+    setTimeout(()=>{intro.classList.add("is-hidden");intro.setAttribute("aria-hidden","true")},780);
+  };
+  skip.addEventListener("click",dismiss);
+  document.addEventListener("keydown",event=>{if(event.key==="Escape")dismiss()},{once:true});
+  setTimeout(dismiss,5400);
+}
+setupIntroAnimation();applyLanguage();updateCount();

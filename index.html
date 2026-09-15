@@ -10,9 +10,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260915-mobile-fix">
+  <link rel="stylesheet" href="styles.css?v=20260915-intro-animation">
 </head>
-<body>
+<body class="intro-active">
+  <div class="intro-screen" id="introScreen" role="dialog" aria-modal="true" aria-label="網站開場動畫">
+    <div class="intro-paper" aria-hidden="true"></div>
+    <div class="intro-orbit intro-orbit-one" aria-hidden="true"></div>
+    <div class="intro-orbit intro-orbit-two" aria-hidden="true"></div>
+    <div class="intro-fireflies" id="introFireflies" aria-hidden="true"></div>
+    <img class="intro-insect intro-butterfly" src="butterfly.png" alt="">
+    <img class="intro-insect intro-dragonfly" src="dragonfly.png" alt="">
+    <img class="intro-insect intro-mantis" src="mantis.png" alt="">
+    <div class="intro-message">
+      <p>統計資訊學系｜學生聲音計畫</p>
+      <h1><span>主任，</span><em>知道嗎！！</em></h1>
+      <div class="intro-line" aria-hidden="true"></div>
+      <span class="intro-caption">微小聲音，匯成方向。</span>
+    </div>
+    <button class="intro-skip" id="introSkip" type="button">跳過動畫 <span aria-hidden="true">→</span></button>
+  </div>
+  <noscript><style>.intro-screen{display:none!important}.intro-active{overflow:auto!important}</style></noscript>
   <a class="skip-link" href="#voices">跳至主要內容</a>
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="回到首頁">
@@ -170,6 +187,6 @@
   </template>
 
   <svg width="0" height="0" style="position:absolute"><symbol id="bug-mark" viewBox="0 0 56 56"><path d="M28 20c-7-7-18-4-18 7 0 10 8 19 18 23 10-4 18-13 18-23 0-11-11-14-18-7Zm0 0v30M20 18c-3-5-4-10-1-15m17 15c3-5 4-10 1-15M17 28 5 22m34 6 12-6M18 37 7 43m31-6 11 6" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/></symbol></svg>
-  <script src="app.js?v=20260915-manifesto-glow" defer></script>
+  <script src="app.js?v=20260915-intro-animation" defer></script>
 </body>
 </html>
