@@ -149,3 +149,16 @@ footer{background:#21473e}
 @media(prefers-reduced-motion:reduce){
   .glow-word,.glow-word::before,.glow-word::after{animation:none}
 }
+
+
+/* Contrasting sizes for the two luminous words */
+.manifesto-text p:first-child .glow-word{
+  font-size:.72em;
+  vertical-align:.11em;
+  margin:0 .025em;
+}
+.manifesto-text p:nth-child(2) .glow-word{
+  font-size:1.32em;
+  vertical-align:-.08em;
+  margin:0 .025em;
+}
