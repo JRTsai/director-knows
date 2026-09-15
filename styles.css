@@ -91,3 +91,61 @@ footer{background:#21473e}
   .keyword-panel{width:100%;max-width:none;grid-template-columns:1fr;gap:8px;padding:18px}
   .word-cloud.mask-heart-cloud{width:min(100%,520px);justify-self:center}
 }
+
+
+/* Two-line luminous manifesto */
+.manifesto-text{
+  font-size:clamp(2.2rem,3.5vw,4.6rem);
+  line-height:1.28;
+}
+.manifesto-text p{
+  width:max-content;
+  max-width:100%;
+  white-space:nowrap;
+  color:#2b756d;
+  background:linear-gradient(90deg,#247f78 0%,#e56b45 47%,#b98c13 75%,#3f8a63 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.manifesto-text mark{
+  background:linear-gradient(transparent 50%,rgba(255,214,91,.52) 50% 91%,transparent 91%);
+  color:#e65e3b;
+  -webkit-text-fill-color:#e65e3b;
+  padding:0 .08em;
+}
+.glow-word{
+  position:relative;
+  display:inline-block;
+  color:#ffd84f;
+  -webkit-text-fill-color:#ffd84f;
+  text-shadow:0 0 .08em #fff,0 0 .2em rgba(255,205,45,.95),0 0 .46em rgba(255,145,37,.7);
+  animation:manifestoLightPulse 1.8s ease-in-out infinite;
+}
+.glow-word::before,.glow-word::after{
+  content:"✦";
+  position:absolute;
+  pointer-events:none;
+  color:#fff3a6;
+  -webkit-text-fill-color:#fff3a6;
+  font-size:.22em;
+  line-height:1;
+  filter:drop-shadow(0 0 4px #ffd13d);
+  animation:manifestoSpark 1.35s ease-in-out infinite;
+}
+.glow-word::before{right:-.2em;top:-.12em}
+.glow-word::after{left:-.18em;bottom:.02em;animation-delay:-.68s}
+@keyframes manifestoLightPulse{
+  0%,100%{transform:scale(1);filter:brightness(1)}
+  50%{transform:scale(1.08);filter:brightness(1.28)}
+}
+@keyframes manifestoSpark{
+  0%,100%{opacity:.2;transform:scale(.45) rotate(0)}
+  45%{opacity:1;transform:scale(1.2) rotate(28deg)}
+}
+@media(max-width:650px){
+  .manifesto-text{font-size:clamp(1.05rem,4.9vw,2.05rem);letter-spacing:-.06em}
+}
+@media(prefers-reduced-motion:reduce){
+  .glow-word,.glow-word::before,.glow-word::after{animation:none}
+}
