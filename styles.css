@@ -162,3 +162,114 @@ footer{background:#21473e}
   vertical-align:-.08em;
   margin:0 .025em;
 }
+
+
+/* Mobile hero: true single-column flow */
+@media(max-width:650px){
+  .hero{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    min-height:auto;
+    padding:96px 18px 28px;
+    overflow:hidden;
+  }
+  .hero-copy{
+    position:relative;
+    z-index:3;
+    width:100%;
+    max-width:none;
+  }
+  .hero h1{
+    font-size:clamp(3.05rem,14.5vw,4.15rem);
+    line-height:.92;
+    margin:14px 0 22px;
+    letter-spacing:-.07em;
+  }
+  .hero-lead{
+    max-width:none;
+    font-size:.96rem;
+    line-height:1.75;
+  }
+  .hero-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+    margin-top:24px;
+  }
+  .hero .primary-button{
+    width:auto;
+    max-width:100%;
+    padding:14px 18px;
+    gap:24px;
+    font-size:.95rem;
+  }
+  .hero .text-link{
+    position:relative;
+    z-index:3;
+    width:auto;
+    max-width:100%;
+    padding:10px 0;
+  }
+  .hero-art{
+    position:relative;
+    inset:auto;
+    top:auto;
+    right:auto;
+    bottom:auto;
+    left:auto;
+    width:100%;
+    height:auto;
+    aspect-ratio:4/3;
+    margin:32px 0 0;
+    opacity:1;
+    transform:rotate(.2deg);
+    z-index:1;
+    overflow:hidden;
+  }
+  .hero-art:before{inset:0}
+  .hero-art picture{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+  }
+  .hero-art picture img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:60% center;
+    clip-path:none;
+  }
+  .hero-art .butterfly-art{width:56px!important;left:35%;top:9%}
+  .hero-art .dragonfly-art{width:76px!important;left:48%;top:2%}
+  .hero-art .cicada-art{width:58px!important;right:6%;top:43%}
+  .hero-art .mantis-art{width:82px!important;left:42%;bottom:2%}
+  .hero-art .firefly-glow-one{left:50%;top:18%}
+  .hero-art .firefly-glow-two{right:8%;top:54%}
+  .hero-art .note-one{left:42%;top:7%;font-size:.62rem}
+  .hero-art .note-two{right:3%;bottom:13%;font-size:.62rem}
+  .hero-art .specimen-label{right:2%;bottom:2%;font-size:.52rem}
+  .hero-art .tape-top{left:55%;width:72px;height:20px}
+  .ink-sun{
+    width:70vw;
+    height:70vw;
+    right:-24vw;
+    top:20%;
+    opacity:.55;
+  }
+  .hero-stat{
+    position:relative;
+    left:auto;
+    bottom:auto;
+    align-self:flex-start;
+    margin:22px 0 0;
+    z-index:3;
+  }
+  .scroll-cue{display:none}
+}
+@media(max-width:380px){
+  .hero{padding-left:16px;padding-right:16px}
+  .hero h1{font-size:clamp(2.9rem,14vw,3.45rem)}
+}
