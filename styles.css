@@ -62,11 +62,13 @@ footer{background:#21473e}
 @media(max-width:1000px){.class-habitat{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.class-habitat{grid-template-columns:1fr}}
 
-/* Randomized heart-shaped keyword cloud */
-.word-cloud.heart-cloud{position:relative;display:block;min-height:350px;padding:0;overflow:hidden;isolation:isolate}
-.word-cloud.heart-cloud::before{content:"♥";position:absolute;left:50%;top:51%;transform:translate(-50%,-50%) scaleX(1.06) scaleY(.72);font:900 clamp(24rem,42vw,32rem)/1 Arial,sans-serif;color:rgba(255,112,72,.07);-webkit-text-stroke:2px rgba(255,112,72,.22);z-index:-1}
-.heart-cloud .cloud-word{position:absolute;left:var(--x);top:var(--y);font-size:clamp(.72rem,calc(var(--weight)*.78rem),1.5rem);white-space:nowrap;transform:translate(-50%,-50%) rotate(-2deg);text-shadow:0 1px 0 #fff;z-index:1}
-.heart-cloud .cloud-word:nth-child(3n){transform:translate(-50%,-50%) rotate(2deg)}
-.heart-cloud .cloud-word:hover{transform:translate(-50%,-50%) scale(1.12);z-index:3}
+/* Dense randomized heart-shaped keyword cloud */
+.word-cloud.heart-cloud{position:relative;display:block;min-height:420px;padding:8px 2%;overflow:hidden;isolation:isolate}
+.word-cloud.heart-cloud::before{content:"♥";position:absolute;left:50%;top:51%;transform:translate(-50%,-50%) scaleX(1.05) scaleY(.78);font:900 clamp(25rem,43vw,34rem)/1 Arial,sans-serif;color:rgba(255,112,72,.045);-webkit-text-stroke:2px rgba(255,112,72,.17);z-index:-1}
+.dense-heart-cloud .cloud-word{position:absolute;left:var(--x);top:var(--y);font-size:clamp(.64rem,calc(var(--weight)*.72rem),1.42rem);white-space:nowrap;transform:translate(-50%,-50%) rotate(var(--rotate));transform-origin:center;line-height:1;color:var(--cloud-color);text-shadow:0 1px 0 #fff;z-index:1}
+.dense-heart-cloud .cloud-word:nth-child(3n){transform:translate(-50%,-50%) rotate(var(--rotate))}
+.dense-heart-cloud .cloud-word:hover{transform:translate(-50%,-50%) rotate(var(--rotate)) scale(1.13);z-index:3}
+.dense-heart-cloud .cloud-repeat{opacity:.88;font-weight:800}
+.dense-heart-cloud .cloud-word sup{font-size:.42em;margin-left:.12em;color:var(--ink);vertical-align:super}
 .class-insect{white-space:nowrap;letter-spacing:-.12em}
-@media(max-width:760px){.word-cloud.heart-cloud{min-height:255px}.word-cloud.heart-cloud::before{font-size:clamp(17rem,88vw,23rem);-webkit-text-stroke:1px rgba(255,112,72,.23)}.heart-cloud .cloud-word{font-size:clamp(.6rem,calc(var(--weight)*.65rem),1.05rem)}}
+@media(max-width:760px){.word-cloud.heart-cloud{min-height:310px;padding:4px 0}.word-cloud.heart-cloud::before{font-size:clamp(20rem,100vw,27rem);-webkit-text-stroke:1px rgba(255,112,72,.18)}.dense-heart-cloud .cloud-word{font-size:clamp(.5rem,calc(var(--weight)*.54rem),.98rem)}}
