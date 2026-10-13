@@ -17,6 +17,7 @@
   scene.innerHTML = '<div class="spring-sun"></div><div class="spring-rays"></div><div class="spring-cloud cloud-a"></div><div class="spring-cloud cloud-b"></div>' +
     svg('<path d="M0 230Q210 110 410 245T870 225T1440 200V700H0Z" fill="#b7dcb3"/><path d="M0 380Q280 180 600 320T1100 300T1440 350V700H0Z" fill="#91c7a0"/><path d="M0 480Q240 340 580 460T1100 395T1440 430V700H0Z" fill="#70b885"/><path d="M0 585Q400 425 760 555T1440 510V700H0Z" fill="#519c70"/><path d="M800 700Q720 550 880 465Q990 405 1065 396Q980 455 953 491Q849 570 1110 700" fill="#e1e9a4" opacity=".55"/>','0 0 1440 700');
   scene.querySelector('svg').classList.add('spring-hills');
+  scene.querySelector('svg').setAttribute('preserveAspectRatio','none');
   for (let i=0;i<30;i++) {
     const plant=document.createElement('div');
     plant.className='spring-plant';
