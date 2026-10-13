@@ -2,6 +2,7 @@
 .hero{min-height:880px;min-height:max(880px,100svh);display:flex;align-items:center;padding:140px 7vw 210px;background:#e4f5ec;isolation:isolate}
 .hero:before,.hero-noise,.hero-art,.ink-sun{display:none}
 .hero:after{display:block;content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,253,231,.96),rgba(255,253,231,.88) 30%,rgba(255,253,231,.12) 64%,transparent)}
+.hero:after{height:auto;width:auto}
 .hero-copy{max-width:600px;width:52%;z-index:3}
 .hero h1{font-size:clamp(3.5rem,6.4vw,6.7rem);line-height:1.1;letter-spacing:-.06em;margin:22px 0 28px}
 .hero h1 em{color:#e76a44}
