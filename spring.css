@@ -1,0 +1,67 @@
+/* Sunshine, open sky and a living meadow. Scoped to the homepage and intro. */
+.hero{min-height:880px;min-height:max(880px,100svh);display:flex;align-items:center;padding:140px 7vw 210px;background:#e4f5ec;isolation:isolate}
+.hero:before,.hero-noise,.hero-art,.ink-sun{display:none}
+.hero:after{display:block;content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,253,231,.96),rgba(255,253,231,.88) 30%,rgba(255,253,231,.12) 64%,transparent)}
+.hero-copy{max-width:600px;width:52%;z-index:3}
+.hero h1{font-size:clamp(3.5rem,6.4vw,6.7rem);line-height:1.1;letter-spacing:-.06em;margin:22px 0 28px}
+.hero h1 em{color:#e76a44}
+html[lang="en"] .hero h1{font-size:clamp(2.7rem,5vw,5.4rem)}
+html[lang="en"] .hero h1 em{white-space:normal}
+.hero-lead{color:#365c49;max-width:460px;line-height:1.95}
+.hero-actions{flex-wrap:wrap;gap:20px}
+.hero-stat{z-index:3;bottom:70px;background:rgba(255,254,235,.88);padding:9px 17px;border-radius:30px;color:#365c49}
+.hero .scroll-cue{display:none}
+.spring-scene{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;background:linear-gradient(#bfe9eb 0%,#e4f3db 48%,#eaf3bb 70%,#8cc68a 100%)}
+.spring-sun{position:absolute;top:7%;right:12%;width:clamp(100px,13vw,190px);aspect-ratio:1;border-radius:50%;background:#fffaaf;box-shadow:0 0 65px 35px #fffbc780,0 0 140px 100px #fffac34a}
+.spring-rays{position:absolute;top:-70%;left:15%;width:150%;height:190%;background:repeating-conic-gradient(from 20deg at 50% 50%,transparent 0deg 18deg,rgba(255,255,216,.25) 22deg 30deg,transparent 36deg 52deg);animation:springSun 40s ease-in-out infinite alternate}
+.spring-cloud{position:absolute;width:250px;height:55px;border-radius:50%;background:#ffffff85;filter:blur(9px);animation:springCloud 35s ease-in-out infinite alternate}
+.spring-cloud:before{content:"";position:absolute;left:30%;top:-25px;width:110px;height:65px;background:inherit;border-radius:50%}
+.cloud-a{top:13%;left:8%}.cloud-b{top:28%;left:63%;transform:scale(.65);animation-delay:-15s}
+.spring-hills{position:absolute;bottom:0;width:100%;height:66%;overflow:visible}
+.spring-plant{position:absolute;bottom:-15px;width:105px;transform-origin:50% 100%;animation:springSway var(--sway) ease-in-out var(--delay) infinite alternate}
+.spring-plant svg{height:100%;width:100%}
+.spring-bug{position:absolute;width:var(--size);height:var(--size);filter:drop-shadow(0 5px 4px #27544218);animation:springFlight var(--flight) ease-in-out var(--delay) infinite var(--direction)}
+.spring-bug svg{display:block;width:100%;height:100%;overflow:visible}
+.spring-wings{transform-origin:50px 50px;animation:springWings .7s ease-in-out infinite alternate}
+.spring-bee .spring-wings,.spring-dragonfly .spring-wings{animation-duration:.14s}
+.spring-ladybird,.spring-beetle{animation-name:springCrawl;width:38px;height:38px}
+.spring-pollen{position:absolute;width:4px;height:4px;border-radius:50%;background:#fffbd4;box-shadow:0 0 8px #fff9c6;animation:springPollen 14s linear var(--delay) infinite}
+.spring-pause{position:absolute;z-index:4;right:22px;bottom:26px;min-height:44px;padding:9px 16px;border:1px solid #4877535c;border-radius:30px;background:#fffce8e8;color:#315c45;font-size:.75rem;cursor:pointer}
+.spring-pause:focus-visible{outline:3px solid #247f78;outline-offset:4px}
+.spring-paused .spring-scene *,.spring-offscreen .spring-scene *{animation-play-state:paused!important}
+.intro-screen{background:#e4f3db}
+.intro-paper,.intro-orbit,.intro-insect,.intro-fireflies{display:none}
+.intro-screen .spring-scene{z-index:-1}
+.intro-screen .intro-message{padding:35px 18px;background:radial-gradient(ellipse,#fffbeee8 30%,#fffbeeb3 55%,transparent 73%);border-radius:50%}
+.intro-message h1{font-size:clamp(3.2rem,8vw,8rem)}
+@keyframes springFlight{0%,100%{transform:translate(0,0) rotate(-8deg)}25%{transform:translate(65px,-36px) rotate(9deg)}55%{transform:translate(-38px,28px) rotate(-10deg)}80%{transform:translate(-72px,-25px) rotate(5deg)}}
+@keyframes springWings{from{transform:scaleX(1)}to{transform:scaleX(.48)}}
+@keyframes springCrawl{0%,100%{transform:translateX(-12px) rotate(15deg)}50%{transform:translateX(20px) rotate(-12deg)}}
+@keyframes springSway{from{transform:rotate(-5deg)}to{transform:rotate(6deg)}}
+@keyframes springSun{from{transform:rotate(-8deg);opacity:.6}to{transform:rotate(8deg);opacity:1}}
+@keyframes springCloud{from{translate:-35px 0}to{translate:70px 0}}
+@keyframes springPollen{0%{transform:translate(0,30px);opacity:0}20%,75%{opacity:.8}100%{transform:translate(-80px,-120px);opacity:0}}
+@media(max-width:1000px) and (min-width:651px){.hero-copy{width:66%;max-width:580px}.hero h1{font-size:5.5rem}}
+@media(max-width:650px){
+ .hero{min-height:850px;min-height:max(850px,100svh);padding:108px 22px 350px;display:block}
+ .hero-copy{width:100%;max-width:none}
+ .hero:after{background:linear-gradient(180deg,#fffcedf0 0%,#fffceded 41%,#fffced30 65%,transparent 78%)}
+ .hero h1{font-size:clamp(2.8rem,13.7vw,4.4rem);margin:17px 0 22px;line-height:1.08}
+ .hero-lead{font-size:.94rem;line-height:1.8;max-width:none}
+ .hero-actions{gap:10px;margin-top:20px}
+ .hero-stat{position:absolute;left:18px;bottom:75px;margin:0}
+ .spring-hills{width:180%;max-width:none;left:-40%;height:42%}
+ .spring-sun{top:52%;right:8%;width:80px}
+ .spring-rays{top:-10%;height:150%}
+ .hero .spring-bug{top:auto!important;bottom:calc(15% + var(--size));left:calc(12% + var(--size))!important}
+ .hero .spring-bug:nth-of-type(3n){left:65%!important;bottom:14%}
+ .hero .spring-bug:nth-of-type(3n + 1){left:38%!important;bottom:26%}
+ .spring-bug{width:calc(var(--size)*.72);height:calc(var(--size)*.72)}
+ .spring-extra{display:none}
+ .spring-plant{height:100px!important;width:65px}
+ .spring-plant:nth-of-type(even){display:none}
+ .intro-screen .spring-sun{top:9%}
+ .intro-message h1{font-size:clamp(3.2rem,16vw,5.2rem)}
+ .intro-caption{letter-spacing:.02em;font-size:.72rem}
+}
+@media(prefers-reduced-motion:reduce){.spring-scene *{animation:none!important}.spring-pause{display:none}}
