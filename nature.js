@@ -2,6 +2,8 @@
  const hero=document.querySelector('.hero');if(!hero)return;
  const scene=document.createElement('div');scene.className='spring-scene';scene.setAttribute('aria-hidden','true');
  scene.innerHTML='<div class="nature-photo"></div><div class="nature-light"></div>';
+ const flowers=[{x:51,w:260,h:390,o:.8},{x:68,w:330,h:500,o:1},{x:85,w:255,h:405,o:.92}];
+ flowers.forEach((f,i)=>{const plant=document.createElement('div');plant.className='nature-flower';plant.style.cssText=`--flower-x:${f.x}%;--flower-width:${f.w}px;--flower-height:${f.h}px;--flower-opacity:${f.o};--breeze:${6.8+i*1.7}s;--flower-delay:-${i*2.3}s`;scene.append(plant);});
  for(let i=0;i<12;i++){
  const bug=document.createElement('span');bug.className='nature-flight';bug.style.cssText=`--x:${48+(i*19)%47}%;--y:${18+(i*13)%60}%;--mobile-y:${60+i*2}%;--size:${i%3===1?25:38+(i*7)%29}px;--duration:${18+i*2}s;--delay:-${i*3.7}s;--sprite:${[0,50,100][i%3]}%;`;bug.innerHTML='<i class="nature-insect"></i>';scene.append(bug);
  }
