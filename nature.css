@@ -5,7 +5,7 @@
 .hero-lead{color:#354a3b}
 .hero-stat,.spring-pause{border-radius:4px;background:#fffdf0ed;color:#354a3b}
 .spring-scene{background:#dce6cc}
-.nature-photo{position:absolute;inset:-2%;background:url('meadow-photo.webp') center 58%/cover no-repeat;animation:natureBreathe 28s ease-in-out infinite alternate}
+.nature-photo{position:absolute;inset:-2%;background:url('meadow-lavender-lilies.webp') center 58%/cover no-repeat;animation:natureBreathe 28s ease-in-out infinite alternate}
 .nature-light{position:absolute;inset:0;background:radial-gradient(ellipse at 88% 7%,#fff1be66,transparent 58%);mix-blend-mode:screen;animation:natureLight 12s ease-in-out infinite alternate}
 .nature-flight{position:absolute;left:var(--x);top:var(--y);width:var(--size);aspect-ratio:1;animation:natureFlight var(--duration) ease-in-out var(--delay) infinite;opacity:.9}
 .nature-insect{display:block;width:100%;height:100%;background-image:url('insects-photo.webp');background-size:300% 100%;background-position:var(--sprite) center;animation:natureWing 1.4s ease-in-out var(--delay) infinite alternate}
